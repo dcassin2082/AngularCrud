@@ -1,0 +1,43 @@
+﻿.table-header {
+    background-color: #d8e7f3 !important;
+}
+.th-background{
+    background-color: #6181bb !important;
+}
+.required-field:after {
+    color: #d00;
+    content: " *";
+    position: absolute;
+    margin-left: 3px;
+    top: 10px;
+}
+.border-right {
+    border-right: 1px solid black;
+}
+
+.border-left{
+    border-left: 1px solid black;
+}
+
+.border-top{
+    border-top:1px solid black;
+}
+.border-bottom{
+    border-bottom:1px solid black;
+}
+.table-width{
+    table-layout: fixed;
+    width: 300px;
+}
+.h1-text{
+    color:cornflowerblue;
+}
+.ng-cloak{
+    display:none !important;
+}
+.lbl-search{
+
+}
+.input-search{
+    border-style:
+}
