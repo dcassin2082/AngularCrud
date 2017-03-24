@@ -1,4 +1,4 @@
-﻿angular.module('productApp', ['ui.bootstrap', 'ngResource']).controller('productController', function ($scope, $http) {
+angular.module('productApp', ['ui.bootstrap', 'ngResource']).controller('productController', ['$scope', '$http', function ($scope, $http) {
     $scope.getProducts = function () {
         $http.get('/api/Products')
         .then(function successCallback(response) {
@@ -142,4 +142,4 @@
         $scope.product.UnitPrice = '';
         $scope.product.UnitsInStock = '';
     };
-});
+}]);
