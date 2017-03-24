@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
@@ -14,6 +14,6 @@ namespace NgCrud.Repository
         void Add(T entity);
         void Delete(T entity);
         T GetEntity(Expression<Func<T, bool>> predicate);
-        IEnumerable<T> GetEntities(Expression<Func<T, bool>> predicate);
+        IQueryable<T> GetEntities(Expression<Func<T, bool>> predicate);
     }
 }
