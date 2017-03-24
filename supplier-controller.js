@@ -1,4 +1,4 @@
-﻿angular.module('supplierApp', ['ui.bootstrap', 'ngResource']).controller('supplierController', function ($scope, $http) {
+angular.module('supplierApp', ['ui.bootstrap', 'ngResource']).controller('supplierController', ['$scope', '$http', function ($scope, $http) {
     $scope.getSuppliers = function () {
         $http.get('/api/Suppliers')
         .then(function (response) {
@@ -160,4 +160,4 @@
         $scope.State = '';
         $scope.ZIP = '';
     };
-});
+}]);
