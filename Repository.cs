@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
@@ -45,16 +45,14 @@ namespace NgCrud.Repository
             dbSet.Remove(entity);
         }
 
-        public IEnumerable<T> GetEntities(Expression<Func<T, bool>> predicate)
+        public IQueryable<T> GetEntities(Expression<Func<T, bool>> predicate)
         {
-            return dbContext.Set<T>().AsQueryable().Where(predicate).ToList();
+            return dbContext.Set<T>().AsQueryable().Where(predicate);
         }
 
         public T GetEntity(Expression<Func<T, bool>> predicate)
         {
             return dbContext.Set<T>().AsQueryable().Where(predicate).FirstOrDefault();
         }
-
-       
     }
 }
