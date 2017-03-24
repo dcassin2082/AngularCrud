@@ -1,4 +1,4 @@
-﻿angular.module('orderApp', ['ui.bootstrap', 'ngResource']).controller('orderController', function ($scope, $http) {
+angular.module('orderApp', ['ui.bootstrap', 'ngResource']).controller('orderController', ['$scope', '$http', function ($scope, $http) {
     $scope.getOrders = function () {
         $http.get('/api/Orders')
         .then(function (response) {
@@ -181,4 +181,4 @@
         $scope.State = '';
         $scope.Zip = '';
     };
-});
+}]);
